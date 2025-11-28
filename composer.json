@@ -1,0 +1,26 @@
+{
+    "name": "xwp/article-sequence-optimizer",
+    "description": "Optimizes infinite scroll performance by managing DOM nodes and visibility for articles.",
+    "type": "wordpress-plugin",
+    "require": {
+        "php": ">=8.1",
+        "composer/installers": "~1.0"
+    },
+    "license": "GPL-2.0-or-later",
+    "authors": [
+        {
+            "name": "XWP",
+            "email": "technology@xwp.co"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/xwp/article-sequence-optimizer/issues",
+        "source": "https://github.com/xwp/article-sequence-optimizer"
+    },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/xwp/article-sequence-optimizer"
+        }
+    ]
+}
