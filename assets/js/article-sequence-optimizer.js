@@ -1,7 +1,7 @@
 /**
  * article-sequence-optimizer.js
  * * Strategy:
- * 1. Iframes/Ads -> CSS content-visibility ( Prevents reloads/flicker )
+ * 1. Iframes (ignore ads) -> CSS content-visibility ( Prevents reloads/flicker )
  * 2. Text/Images -> DOM Detachment ( Reduces DOM size/INP )
  * 3. Security -> Uses direct node references ( No innerHTML/XSS risk )
  * 4. Stability -> Implements LRU Caching to prevent memory leaks
@@ -66,7 +66,7 @@
             }
 
             if ( hasEmbeds( el ) ) {
-                // STRATEGY A: IFRAME ( CSS Hide ) - Secure against ad re-triggering
+                // STRATEGY A: IFRAME ( CSS Hide ) - Secure against emmbeds re-initialization
                 el.classList.add( 'inp-article-visibility-optimized' );
             } else {
                 // STRATEGY B: DETACHMENT ( Memory Move ) - Secure against XSS
