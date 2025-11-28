@@ -66,7 +66,7 @@
             }
 
             if ( hasEmbeds( el ) ) {
-                // STRATEGY A: IFRAME ( CSS Hide ) - Secure against emmbeds re-initialization
+                // STRATEGY A: IFRAME ( CSS allow content-visibility optimization ) - Secure against embeds re-initialization
                 el.classList.add( 'inp-article-visibility-optimized' );
             } else {
                 // STRATEGY B: DETACHMENT ( Memory Move ) - Secure against XSS

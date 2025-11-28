@@ -13,8 +13,8 @@ Optimizes infinite scroll performance by managing DOM nodes and visibility for a
 
 The Article Sequence Optimizer improves the performance of long article sequences (infinite scroll) by intelligently managing the DOM. It uses a hybrid approach to reduce Interaction to Next Paint (INP) and memory usage:
 
-1.  **CSS Content Visibility**: For articles containing iframes (like embeds), it uses `content-visibility: hidden` to prevent heavy reloads and flickering when scrolling back.
-2.  **DOM Detachment**: For text/image-only articles, it detaches the content from the DOM and stores it in a memory fragment, significantly reducing the DOM size and style recalculation costs.
+1.  **CSS Content Visibility**: For articles containing iframes (like embeds), it uses `content-visibility: auto` to remove them from the video memory / rendering chain, while preventing reloads or flickering when scrolling back.
+2.  **DOM Detachment**: For text/image-only articles, it detaches the content from the DOM and stores it in a memory fragment, significantly reducing the active DOM size and style recalculation costs.
 
 ## Configuration
 
